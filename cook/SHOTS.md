@@ -1,0 +1,61 @@
+# Shots & Visual Breakdown: Reference R01
+
+## Shot 01: Full Dashboard View (1440x900 viewport)
+- **Reference**: `cook/refs/R01.webp`
+- **Layout Structure**:
+  - **Left Sidebar** (~240px wide):
+    - Brand: Circular purple spiral/sun icon, "Synergy" (font-semibold text-neutral-900), "HR Management" (text-xs text-neutral-400), dropdown chevron.
+    - Navigation "MAIN":
+      - Dashboard (active: light gray pill bg, dark text, purple vertical pill indicator at left border, chevron right).
+      - Calendar, Time Off, Projects, Team, Notes, Benefits (with orange "NEW" pill badge), Documents.
+    - Navigation "FAVORITES":
+      - Synergy Team (blue dot, `⌘ 1` badge)
+      - Monday Redesign (red dot, `⌘ 2` badge)
+      - Udemy Courses (purple dot, `⌘ 3` badge)
+    - Bottom Actions:
+      - Settings, Support
+    - Bottom User Card:
+      - Avatar (Sophia Williams with 3D memoji style), name "Sophia Williams" with blue verified badge, email `sophia@alignui.com`, right chevron.
+  - **Header Bar** (spanning right area):
+    - Left: User avatar, "Sophia Williams" (font-bold text-lg), "Welcome back to Synergy 👋" (text-neutral-500 text-sm).
+    - Right: Search button/input (`⌘K`), Notification bell (with red notification dot indicator), "+ Schedule" secondary rounded-xl button, "+ Create a Request" / "+ Apply for Leave" vibrant purple primary button with white text and plus icon.
+  - **Bento Grid** (3 columns):
+    - **Column 1**:
+      - **Leave Balances / Time Off Card**:
+        - Header: Clock icon, "Time Off" (font-semibold), "See All" pill button.
+        - Semi-circular radial arc gauge: purple filled arc, light gray track, center text "16" (large bold), "OUT OF 20" (small uppercase neutral-400).
+        - Balance items list:
+          - Aug 11, 2023 (Sick) - amber status dot + "Pending" pill badge (soft yellow/amber bg).
+          - July 15, 2023 (Annual) - green status dot + "Confirmed" pill badge (soft green/emerald bg).
+          - Jun 24, 2023 (Casual) - red status dot + "Rejected" pill badge (soft red/rose bg).
+        - In addition: 3 quick balance cards (Casual Leave: 8/10, Sick Leave: 5/6, Earned Leave: 12/15) with circular arc progress.
+      - **Status Tracker Card**:
+        - Header: Laptop/Display icon, "Status Tracker", "See All".
+        - Section "Absent": James Brown avatar, "James Brown 🌸", "Replaced by Laura Perez", "Absent" pill badge (dark gray).
+        - Section "Away":
+          - Sophia Williams (Synergy) - "25m" time badge (orange pill).
+          - Arthur Taylor (Apex) - "12m" time badge (orange pill).
+          - Emma Wright (Pulse) - "8m" time badge (orange pill).
+    - **Column 2**:
+      - **Recent Leave Requests / Current Project Card**:
+        - Leave Requests data table with Employee avatar, Name, Leave Type, Duration / Dates, Status badge, Action buttons (Approve / Reject).
+        - Or Project Overview matching reference with progress badge ("In Progress"), Project Manager, Design Lead, Team avatar stack (+8 people), Timeline, Description.
+      - **Notes / Activity Card**:
+        - Header: Document icon, "Notes", "See All".
+        - Interactive checkboxes / task items with colorful tag pills (e.g. "Today", "To-do", "Meeting", "Important") and dates.
+    - **Column 3**:
+      - **Upcoming Holidays & Schedule Card**:
+        - Header: Calendar icon, "Schedule", "See All".
+        - Month switcher: `< Aug, 2023 >`.
+        - Day strip: Fri 31, Sat 01, Sun 02 (active purple rounded-xl, white text), Mon 03, Tue 04.
+        - Search bar: "Search..." with filter icon.
+        - Tabs: Meetings, Events, Holiday.
+        - Schedule Cards:
+          - Card 1: Warm peach/orange gradient bg (`from-orange-50/80 to-amber-100/50`), border `border-orange-200/50`, title "Meeting with James Brown", time "8:00 - 8:45 AM (UTC)", avatar stack (+2), "On Google Meet", tag "MARKETING".
+          - Card 2: Soft sky blue gradient bg (`from-blue-50/80 to-indigo-100/50`), title "Meeting with Laura Perez", time "9:00 - 9:45 AM (UTC)", avatar stack, "On Zoom", tag "PRODUCT MANAGER".
+          - Card 3: Soft lavender gradient bg (`from-purple-50/80 to-violet-100/50`), title "Meeting with Arthur Taylor", time "10:00 - 11:00 AM (UTC)", avatar stack, "On Slack", tag "PARTNERSHIP".
+          - Holiday view: Upcoming Company Holidays (e.g., Labor Day, Thanksgiving, Winter Break, New Year) with countdown tags, festive soft pastel cards.
+  - **Apply for Leave Modal**:
+    - Animated spring modal with backdrop blur.
+    - Form fields: Employee Name (read-only/selectable), Leave Type (Casual, Sick, Earned/Annual, Parental, Unpaid), Start Date, End Date, Duration calculation, Reason text area, Attachment option.
+    - Cancel & Submit buttons, with celebration toast and instant update to the balances and Recent Requests list.
