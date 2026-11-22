@@ -84,7 +84,7 @@ export const statusTrackerData = {
       id: "st-2",
       name: "Sophia Williams",
       avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&h=120&q=80",
-      company: "Synergy",
+      company: "Transket",
       duration: "25m",
     },
     {

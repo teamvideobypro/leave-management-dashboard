@@ -35,7 +35,7 @@ export const Sidebar = ({
   ];
 
   const favorites = [
-    { id: 'fav-1', label: 'Synergy Team', color: 'bg-blue-500', shortcut: '⌘ 1' },
+    { id: 'fav-1', label: 'Transket Team', color: 'bg-blue-500', shortcut: '⌘ 1' },
     { id: 'fav-2', label: 'Monday Redesign', color: 'bg-rose-500', shortcut: '⌘ 2' },
     { id: 'fav-3', label: 'Udemy Courses', color: 'bg-purple-500', shortcut: '⌘ 3' },
   ];
@@ -68,7 +68,7 @@ export const Sidebar = ({
             </div>
             <div className="min-w-0">
               <span className="text-sm font-bold text-neutral-900 block leading-tight truncate">
-                Synergy
+                Transket
               </span>
               <span className="text-[11px] text-neutral-400 font-medium block leading-tight truncate">
                 HR Management

@@ -4,8 +4,6 @@ import {
   CheckCircle2,
   AlertCircle,
   X,
-  Laptop,
-  Maximize2,
   Layers,
   FileText,
 } from 'lucide-react';
@@ -34,7 +32,6 @@ export default function App() {
   const [balances, setBalances] = useState(initialLeaveBalances);
   const [requests, setRequests] = useState(initialRequestsData);
   const [toast, setToast] = useState(null);
-  const [browserFrameMode, setBrowserFrameMode] = useState(false);
   const [centerViewMode, setCenterViewMode] = useState('leaves'); // 'leaves' | 'projects'
 
   const showToast = (message, type = 'success') => {
@@ -167,24 +164,6 @@ export default function App() {
                 <span>Projects & Notes</span>
               </button>
             </div>
-
-            {/* AlignUI Frame View Toggle */}
-            <button
-              onClick={() => setBrowserFrameMode(!browserFrameMode)}
-              className="text-xs font-semibold text-neutral-600 hover:text-neutral-900 bg-white border border-neutral-200/90 px-3 py-1.5 rounded-xl shadow-xs hover:bg-neutral-50 flex items-center gap-1.5 transition-colors cursor-pointer"
-            >
-              {browserFrameMode ? (
-                <>
-                  <Maximize2 className="w-3.5 h-3.5 text-neutral-500" />
-                  <span>Full Screen</span>
-                </>
-              ) : (
-                <>
-                  <Laptop className="w-3.5 h-3.5 text-neutral-500" />
-                  <span>AlignUI Frame</span>
-                </>
-              )}
-            </button>
           </div>
         </div>
 
@@ -242,61 +221,14 @@ export default function App() {
   );
 
   return (
-    <div
-      className={
-        browserFrameMode
-          ? 'min-h-screen bg-neutral-200/80 p-3 sm:p-5 lg:p-8 flex items-center justify-center'
-          : 'min-h-screen bg-[#F8F9FA]'
-      }
-    >
-      {/* AlignUI Browser Mockup Frame matching the reference image */}
-      {browserFrameMode ? (
-        <div className="w-full max-w-[1540px] bg-white rounded-2xl md:rounded-3xl shadow-2xl border border-neutral-300/80 overflow-hidden flex flex-col max-h-[96vh]">
-          {/* Browser Window Header with 3 dots & address bar */}
-          <div className="bg-[#EDEDED] px-4 py-2.5 border-b border-neutral-200 flex items-center justify-between select-none shrink-0">
-            {/* Window control dots */}
-            <div className="flex items-center gap-2">
-              <span className="w-3 h-3 rounded-full bg-[#FF5F56] border border-[#E0443E]" />
-              <span className="w-3 h-3 rounded-full bg-[#FFBD2E] border border-[#DEA123]" />
-              <span className="w-3 h-3 rounded-full bg-[#27C93F] border border-[#1AAB29]" />
-            </div>
-
-            {/* Address Bar */}
-            <div className="w-full max-w-sm bg-white rounded-lg px-3 py-1 flex items-center justify-center gap-1.5 text-xs text-neutral-600 shadow-xs border border-neutral-200/60">
-              <span className="text-[11px] text-neutral-400">🔒</span>
-              <span className="font-semibold text-neutral-800">alignui.com</span>
-            </div>
-
-            {/* Browser Right Icons */}
-            <div className="flex items-center gap-2.5 text-neutral-400 text-xs">
-              <span className="hover:text-neutral-700 cursor-pointer">⬇</span>
-              <span className="hover:text-neutral-700 cursor-pointer">＋</span>
-            </div>
-          </div>
-
-          {/* App Body inside Mockup */}
-          <div className="flex flex-1 overflow-y-auto">
-            <Sidebar
-              activeTab={activeTab}
-              setActiveTab={setActiveTab}
-              mobileOpen={mobileSidebarOpen}
-              setMobileOpen={setMobileSidebarOpen}
-            />
-            {dashboardContent}
-          </div>
-        </div>
-      ) : (
-        /* Full Screen Native Dashboard View */
-        <div className="flex min-h-screen">
-          <Sidebar
-            activeTab={activeTab}
-            setActiveTab={setActiveTab}
-            mobileOpen={mobileSidebarOpen}
-            setMobileOpen={setMobileSidebarOpen}
-          />
-          {dashboardContent}
-        </div>
-      )}
+    <div className="min-h-screen bg-[#F8F9FA] flex">
+      <Sidebar
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+        mobileOpen={mobileSidebarOpen}
+        setMobileOpen={setMobileSidebarOpen}
+      />
+      {dashboardContent}
 
       {/* Interactive Apply for Leave Modal */}
       <ApplyLeaveModal

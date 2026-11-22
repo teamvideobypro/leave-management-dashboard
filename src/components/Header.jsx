@@ -44,7 +44,7 @@ export const Header = ({
               {currentUser.name}
             </h1>
             <p className="text-xs text-neutral-500 font-medium flex items-center gap-1 leading-tight mt-0.5 truncate">
-              <span>Welcome back to Synergy</span>
+              <span>Welcome back to the Transket</span>
               <span>👋</span>
             </p>
           </div>
